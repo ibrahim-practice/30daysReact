@@ -5,18 +5,19 @@ import Login from "./Login";
 export default class CONDITIONAL_RENDERING extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       isLoggedIn: false,
     };
   }
 
   render() {
-    if (this.state.isLoggedIn) {
-      return <HomePage />;
+    const { isLoggedIn } = this.state;
+    let element;
+    if (isLoggedIn) {
+      element = <HomePage />;
     } else {
-      return <Login />;
+      element = <Login />;
     }
-    // return <div>hi</div>;
+    return <div>{element}</div>;
   }
 }
