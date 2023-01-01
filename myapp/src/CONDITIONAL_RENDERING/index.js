@@ -13,11 +13,7 @@ export default class CONDITIONAL_RENDERING extends Component {
   render() {
     const { isLoggedIn } = this.state;
     let element;
-    if (isLoggedIn) {
-      element = <HomePage />;
-    } else {
-      element = <Login />;
-    }
+    element = isLoggedIn ? <HomePage /> : <Login />;
     return <div>{element}</div>;
   }
 }
