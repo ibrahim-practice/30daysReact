@@ -1,10 +1,10 @@
 import React from "react";
-import Event_Handling from "./EVENT_HANDLER/Index";
+import Event_Binding from "./Event_Binding";
 
 export default function App() {
   return (
     <div>
-      <Event_Handling />
+      <Event_Binding />
     </div>
   );
 }
