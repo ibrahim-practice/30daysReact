@@ -1,0 +1,15 @@
+button {
+  width: 5rem;
+  height: 3 rem;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2525dd;
+  color: white;
+}
+.buttonalign {
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+}
