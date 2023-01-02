@@ -1,10 +1,10 @@
 import React from "react";
-import Event_Binding from "./Event_Binding";
+import Hooks_Usestate from "./Hooks/index2";
 
 export default function App() {
   return (
     <div>
-      <Event_Binding />
+      <Hooks_Usestate />
     </div>
   );
 }
