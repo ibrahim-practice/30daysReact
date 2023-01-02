@@ -9,7 +9,9 @@ export default function Hooks_Usestate() {
   return (
     <div>
       <h1>Count : {count}</h1>
-      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleIncrement} disabled={count === 10 ? true : false}>
+        Increment
+      </button>
     </div>
   );
 }
