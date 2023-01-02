@@ -3,15 +3,21 @@ import "./Form.css";
 export default function Form() {
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const { name, email, password } = user;
-  const handleNameChange = (e) => {
-    setUser({ name: e.target.value, email, password });
+
+  const handleChange = (e) => {
+    // const filedName = e.target.name;
+    setUser({ ...user, [e.target.name]: e.target.value });
+    // if (filedName === "name") {
+    //   setUser({ name: e.target.value, email, password });
+    // }
+    // if (filedName === "email") {
+    //   setUser({ name, email: e.target.value, password });
+    // }
+    // if (filedName === "password") {
+    //   setUser({ name, password: e.target.value, email });
+    // }
   };
-  const handleEmailChange = (e) => {
-    setUser({ name, email: e.target.value, password });
-  };
-  const handlePasswordChange = (e) => {
-    setUser({ name, password: e.target.value, email });
-  };
+
   const handleSubmit = (e) => {
     console.log("Form is submitted");
     let userInfo = {
@@ -35,7 +41,7 @@ export default function Form() {
             id="name"
             value={name}
             required
-            onChange={handleNameChange}
+            onChange={handleChange}
           />
         </div>
 
@@ -47,7 +53,7 @@ export default function Form() {
             id="email"
             value={email}
             required
-            onChange={handleEmailChange}
+            onChange={handleChange}
           />
         </div>
         <div>
@@ -58,7 +64,7 @@ export default function Form() {
             id="password"
             value={password}
             required
-            onChange={handlePasswordChange}
+            onChange={handleChange}
           />
         </div>
         <div>
