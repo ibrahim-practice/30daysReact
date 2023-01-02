@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import "./Form.css";
 export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({ name: "", email: "", password: "" });
+  const { name, email, password } = user;
   const handleNameChange = (e) => {
-    setName(e.target.value);
+    setUser({ name: e.target.value, email, password });
   };
   const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+    setUser({ name, email: e.target.value, password });
   };
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+    setUser({ name, password: e.target.value, email });
   };
   const handleSubmit = (e) => {
     console.log("Form is submitted");
